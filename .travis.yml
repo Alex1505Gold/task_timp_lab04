@@ -1,8 +1,8 @@
 languahe: cpp
 
 script:
-- cmake ./formatter_lib -B ./formatter_lib/_build
-- cmake --build ./formatter_lib/_build
+- cmake -Hformatter_lib -Bformatter_lib/_build -DCMAKE_INSTALL_PREFIX=_install
+- cmake --build formatter_lib/_build
 
 addons:
   apt:
