@@ -1,0 +1,13 @@
+languahe: cpp
+
+script:
+- cmake ./formatter_lib -B ./formatter_lib/_build
+- cmake --build ./formatter_lib/_build
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
